@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600,700,800&display=swap');
+
 /* body {
     height: 100%;
     background: #FAFAFA;
@@ -41,7 +43,8 @@
     padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
 }
 
-.pf-c-form-control:hover, .pf-c-form-control:focus {
+.pf-c-form-control:hover,
+.pf-c-form-control:focus {
     border-bottom-color: #0066CC;
     border-bottom-color: var(--pf-global--primary-color--100);
     border-bottom-width: 2px;
@@ -157,7 +160,7 @@
 
 .pf-m-primary {
     color: #FFFFFF;
-    background-color: #4EB86B;
+    background-color: #4EB86B !important;
     width: 100%;
     border: 1px solid transparent;
     border-radius: 5px;
@@ -166,7 +169,7 @@
 /* default - IE compatibility */
 
 .pf-m-primary:hover {
-    background-color: #447452;
+    background-color: #3b894f !important;
 }
 
 /* default - IE compatibility */
@@ -180,6 +183,16 @@
 
 h1#kc-page-title {
     margin-top: 10px;
+    font-family: 'Montserrat', Arial;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333745;
+    border-bottom: 1px solid #D5D5D5;
+    padding-bottom: 15px;
 }
 
 #kc-locale ul {
@@ -247,7 +260,7 @@ div.kc-logo-text span {
 
 #kc-header {
     width: 410px;
-    height: 150px;
+    height: 40px;
     margin: auto;
 }
 
@@ -281,6 +294,7 @@ div.kc-logo-text span {
 
 #kc-content-wrapper {
     margin-top: 20px;
+    /* text-align: center; */
 }
 
 #kc-form-wrapper {
@@ -486,9 +500,11 @@ ul#kc-totp-supported-apps {
         position: absolute;
         width: 100%;
     }
+
     .login-pf .container {
         padding-right: 80px;
     }
+
     #kc-locale {
         position: relative;
         text-align: right;
@@ -500,12 +516,14 @@ ul#kc-totp-supported-apps {
     .login-pf body {
         background: white;
     }
+
     #kc-header {
         padding-left: 15px;
         padding-right: 15px;
         float: none;
         text-align: left;
     }
+
     #kc-header-wrapper {
         font-size: 16px;
         font-weight: bold;
@@ -513,23 +531,28 @@ ul#kc-totp-supported-apps {
         color: #72767b;
         letter-spacing: 0;
     }
+
     div.kc-logo-text {
         margin: 0;
         width: 150px;
         height: 32px;
         background-size: 100%;
     }
+
     #kc-form {
         float: none;
     }
+
     #kc-info-wrapper {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         background-color: transparent;
     }
+
     .login-pf .container {
         padding-top: 15px;
         padding-bottom: 15px;
     }
+
     #kc-locale {
         position: absolute;
         width: 200px;
@@ -538,6 +561,7 @@ ul#kc-totp-supported-apps {
         text-align: right;
         z-index: 9999;
     }
+
     #kc-logo-wrapper {
         background-size: 100px 21px;
         height: 21px;
@@ -576,21 +600,25 @@ ul#kc-totp-supported-apps {
 
 /* Internet Explorer 11 compatibility workaround for select-authenticator screen */
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
     .select-auth-box-parent {
         border-top: 1px solid #f0f0f0;
         padding-top: 1rem;
         padding-bottom: 1rem;
         cursor: pointer;
     }
+
     .select-auth-box-headline {
         font-size: 16px;
         color: #06c;
         font-weight: bold;
     }
+
     .select-auth-box-desc {
         font-size: 14px;
     }
+
     .pf-l-stack {
         flex-basis: 100%;
     }
@@ -642,10 +670,10 @@ ul#kc-totp-supported-apps {
     box-shadow: var(--pf-global--BoxShadow--lg);
     padding: 0 20px;
     max-width: 640px;
-    border-top: 4px solid;
-    border-color: #0066CC;
+    border-top: 20px solid;
+    border-color: #009A69;
     /* default - IE compatibility */
-    border-color: var(--pf-global--primary-color--100);
+    /* border-color: var(--pf-global--primary-color--100); */
 }
 
 /*phone*/
@@ -659,10 +687,12 @@ ul#kc-totp-supported-apps {
         border-top: 0;
         box-shadow: 0 0;
     }
+
     .kc-social-grid {
         grid-column-end: 12;
         --pf-l-grid__item--GridColumnEnd: span 12;
     }
+
     .kc-social-grid .kc-social-icon-text {
         left: -15px;
     }
@@ -695,7 +725,9 @@ ul#kc-totp-supported-apps {
     width: 100%;
 }
 
-#kc-form-login div.form-group:last-of-type, #kc-register-form div.form-group:last-of-type, #kc-update-profile-form div.form-group:last-of-type {
+#kc-form-login div.form-group:last-of-type,
+#kc-register-form div.form-group:last-of-type,
+#kc-update-profile-form div.form-group:last-of-type {
     margin-bottom: 0px;
 }
 
@@ -712,4 +744,25 @@ ul#kc-totp-supported-apps {
     margin-left: -40px;
     font-size: 20px;
     cursor: pointer;
+}
+
+#kc-link-clickaqui {
+    font-family: 'Montserrat', Arial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #00BCD4;
+}
+
+#kc-info-message p a {
+    font-family: 'Montserrat', Arial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #00BCD4;
 }

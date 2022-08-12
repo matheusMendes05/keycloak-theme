@@ -22,6 +22,7 @@
     font-weight: 800;
     margin: 10px 0px;
     text-align: left;
+    color: red !important;
 }
 
 .kc-tamplate-body-email {

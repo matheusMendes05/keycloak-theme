@@ -22,6 +22,7 @@
     font-weight: 800;
     margin: 10px 0px;
     text-align: left;
+    color: red !important;
 }
 
 .kc-tamplate-body-email {
@@ -30,6 +31,4 @@
     background-color: #fff;
     border-top: 5px solid #d5d5d5;
     border-bottom: 20px solid #d5d5d5;
-
-    
 }
