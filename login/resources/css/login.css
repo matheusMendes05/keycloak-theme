@@ -12,6 +12,13 @@
 .div-group-valid-password {
     margin-top: 20px;
     margin-bottom: 20px;
+    list-style: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #8C97AC;
 }
 
 #recaptcha {

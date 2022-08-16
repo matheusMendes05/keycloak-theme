@@ -137,7 +137,7 @@ section{
     <#if requiredActionsValues == "VERIFY_EMAIL">
         <section style="background-color: #f5f5f5; ">
             <div style="width: 80%; margin:auto; margin-top:50px; padding: 40px;">
-                <h1 class="kc-tittle-email">Verificação de endereço de e-mail!</h1>
+                <h1 class="kc-tittle-email">Verificação de endereço de e-mail</h1>
                 <div class="kc-content-email">
                     ${kcSanitize(msg("emailVerificationBodyHtml",link, linkExpiration, realmName, requiredActionsText, linkExpirationFormatter(linkExpiration)))?no_esc}
                 </div>

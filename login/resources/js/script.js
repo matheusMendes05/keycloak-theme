@@ -85,7 +85,7 @@ function confirmPassword() {
     var confirmPassword = document.getElementById("password-confirm").value;
 
     if (newPassword != confirmPassword) {
-        document.getElementById("senhasIguais").style.color = "black"
+        document.getElementById("senhasIguais").style.color = "#8C97AC"
     } else {
         document.getElementById("senhasIguais").style.color = "green"
     }
@@ -116,12 +116,14 @@ function validPasswords(valor) {
     /** number */
 
     var caracterregexp = new RegExp(/[@$!%*-+~#?&]/);
-    var caracter = caracterregexp.exec(valor.value);
+    var caracter = caracterregexp.test(valor.value);
+
+    console.log(mausculo)
 
     if (numeroCaracters) {
         document.getElementById("numerosDeCaracters").style.color = "green"
     } else {
-        document.getElementById("numerosDeCaracters").style.color = "black"
+        document.getElementById("numerosDeCaracters").style.color = "#8C97AC"
     }
 
     // if(number){
@@ -133,20 +135,22 @@ function validPasswords(valor) {
     if (mausculo) {
         document.getElementById("mausculoValidSenha").style.color = "green"
     } else {
-        document.getElementById("mausculoValidSenha").style.color = "black"
-    }
-
-    if (minusculo) {
-        document.getElementById("minusculoValidSenha").style.color = "green"
-    } else {
-        document.getElementById("minusculoValidSenha").style.color = "black"
+        document.getElementById("mausculoValidSenha").style.color = "#8C97AC"
     }
 
     if (caracter) {
         document.getElementById("caracterValidSenha").style.color = "green"
     } else {
-        document.getElementById("caracterValidSenha").style.color = "black"
+        document.getElementById("caracterValidSenha").style.color = "#8C97AC"
     }
+
+    if (minusculo) {
+        document.getElementById("minusculoValidSenha").style.color = "green"
+    } else {
+        document.getElementById("minusculoValidSenha").style.color = "#8C97AC"
+    }
+
+  
 
 
 }
