@@ -10,6 +10,12 @@
 
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100,200,300,400,500,600,700,800,900&display=swap');
 
+ .body-kc{
+    height: 680px;
+    background: #FFFFF;
+    border: 1px solid white;
+ }
+
 .kc-content-msg{
     width: 87%;
 }
@@ -40,50 +46,53 @@ kc-font-color{
     color: #4a4a4a;
 }
 
-section {
-    width: 100%;
-    height: auto;
-    background: #FFFFF;
-}
+
 
 section .kc-body-emai {
     width: 100%; height:80%; background-color: #000 !important; display: flex; flex-direction: column; justify-content: center; align-content: center;
 }
 
 
-section{
-    width: 100% !important;
-    height: 80% !important;
-    background-color: #f5f5f5 !important;
-    margin-top:5%;
+.section{
+    height: 560px;
+    background-color: #f5f5f5!important;
+    margin: 4% 0px;
+    border: 1px solid white;
 }
-.kc-tittle-email{
-    width: 50%;
-    font-family: 'Montserrat', Arial;
+
+.kc-tittle-email-update, 
+.kc-tittle-email-verify {
+    font-family: 'Montserrat',Arial;
     font-style: normal;
     font-weight: 800;
     font-size: 2rem;
     line-height: 44px;
     text-transform: uppercase;
     color: #333745;
-    margin-bottom: 36px;
+}
+
+.kc-tittle-email-update {
+    width: 800px;
+    margin-bottom: 60px;
+}
+
+.kc-tittle-email-verify{
+    width: 400px;
+    margin-bottom: 48px;
 }
 
 
 .kc-content-email{
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 20px;
-    width: 60%;
-    height: 36%;
+    width: 550px;
     padding: 40px;
-
-    font-family: 'Montserrat', Arial;
+    font-family: 'Montserrat',Arial;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-
-    color: #8C97AC;
+    color: #8c97ac;
 }
 
 .kc-header-rpassword{
@@ -115,6 +124,11 @@ section{
     margin: auto;
 }
 
+.email-kc-body{
+    width: 80%;
+    margin: 88px auto;
+}
+
 @media screen and (max-width: 600px) {
     .kc-tittle-email{
         width: 90%;
@@ -130,40 +144,46 @@ section{
 </style>
 </head>
 
-<body style="background: #FFFFF;">
+<body>
 
-<div style="height: 100%; background: #f5f5f5;">
-    <#if requiredActionsValues == "VERIFY_EMAIL">
-        <section style="background-color: #f5f5f5; ">
-            <div style="width: 80%; margin:auto; margin-top:50px; padding: 40px;">
-                <h1 class="kc-tittle-email">Verificação de endereço de e-mail</h1>
-                <div class="kc-content-email">
-                    ${kcSanitize(msg("emailVerificationBodyHtml",link, linkExpiration, realmName, requiredActionsText, linkExpirationFormatter(linkExpiration)))?no_esc}
+<div class="body-kc"> 
+    <div>
+        <#if requiredActionsValues == "VERIFY_EMAIL">
+            <div class="section">
+                <div class="email-kc-body">
+                    <h1 class="kc-tittle-email-verify">Verificação de endereço de e-mail</h1>
+                    <div class="kc-content-email">
+                        ${kcSanitize(msg("emailVerificationBodyHtml",link, linkExpiration, realmName, requiredActionsText, linkExpirationFormatter(linkExpiration)))?no_esc}
+                    </div>
                 </div>
             </div>
-        </section>
 
-    <#elseif requiredActionsValues == "UPDATE_PASSWORD">
+        <#elseif requiredActionsValues == "UPDATE_PASSWORD">
 
-    <div class="kc-header-rpassword">
-        <img src="https://devland.cidadao.online/_nuxt/img/logo2.9bdd913.png" alt="logo_proximo" style="width: 20%;"/>
-    </div>
+        <!--
+        <div class="kc-header-rpassword">
+            <img src="https://devland.cidadao.online/_nuxt/img/logo2.9bdd913.png" alt="logo_proximo" style="width: 20%;"/>
+        </div>
+        -->
 
-       <section style="background-color: #f5f5f5;">
-            <div style="width: 80%; margin:auto; margin-top:50px;">
-                <h1 class="kc-tittle-email">RECUPERAR A SENHA.</h1>
-                <div class="kc-content-email">
-                    ${kcSanitize(msg("passwordResetBodyHtml",link, linkExpiration, realmName, requiredActionsText, linkExpirationFormatter(linkExpiration)))?no_esc}
+        <div class="section">
+                <div class="email-kc-body">
+                    <h1 class="kc-tittle-email-update">RECUPERAR A SENHA.</h1>
+                    <div class="kc-content-email">
+                        ${kcSanitize(msg("passwordResetBodyHtml",link, linkExpiration, realmName, requiredActionsText, linkExpirationFormatter(linkExpiration)))?no_esc}
+                    </div>
                 </div>
-            </div>
-       </section>
+        </div>
 
-    <div class="kc-footer-rpassword">
-        <a href="https://devland.cidadao.online/#/" >www.proximo.digital</a>
+    <!-- 
+        <div class="kc-footer-rpassword">
+            <a href="https://devland.cidadao.online/#/" >www.proximo.digital</a>
+        </div>
+    -->
+
+        <#else>
+        </#if>
     </div>
-
-    <#else>
-    </#if>
 </div>
 
 </body>
