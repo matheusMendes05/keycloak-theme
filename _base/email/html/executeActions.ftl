@@ -13,7 +13,7 @@
  .body-kc{
     height: 680px;
     background: #FFFFF;
-    border: 1px solid white;
+    border: 1px solid transparent;
  }
 
 .kc-content-msg{
@@ -57,7 +57,7 @@ section .kc-body-emai {
     height: 560px;
     background-color: #f5f5f5!important;
     margin: 4% 0px;
-    border: 1px solid white;
+    border: 1px solid transparent;
 }
 
 .kc-tittle-email-update, 
@@ -131,11 +131,9 @@ section .kc-body-emai {
 
 @media screen and (max-width: 600px) {
     .kc-tittle-email{
-        width: 90%;
         font-size: 1rem;
     }
     .kc-content-email{
-        width: 90%;
         margin: 0px !important;
         padding: 5px;
     }
